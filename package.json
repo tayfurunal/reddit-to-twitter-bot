@@ -1,0 +1,29 @@
+{
+  "name": "reddit2twitterbot",
+  "version": "1.0.0",
+  "description": "a twitter bot that tweets from r/ProgrammerHumor",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tayfurunal/RedditToTwitter-Bot.git"
+  },
+  "keywords": [
+    "bot",
+    "twitter",
+    "reddit"
+  ],
+  "author": "Tayfur Unal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tayfurunal/RedditToTwitter-Bot/issues"
+  },
+  "homepage": "https://github.com/tayfurunal/RedditToTwitter-Bot#readme",
+  "dependencies": {
+    "image-downloader": "^3.5.0",
+    "node-fetch": "^2.6.0",
+    "twit": "^2.2.11"
+  }
+}
