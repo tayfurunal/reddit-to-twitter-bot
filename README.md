@@ -50,4 +50,4 @@ After cloning this repository, you'll need to take a look on these files:
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://github.com/tayfurunal/reddit-to-twitter-bot/blob/master/LICENSE)
