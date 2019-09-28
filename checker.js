@@ -1,9 +1,9 @@
-var fs = require('fs');
+const fs = require('fs');
 
 if (fs.existsSync('./data/data.json') == false)
   fs.appendFileSync('./data/data.json', '{}');
 
-var map = JSON.parse(fs.readFileSync('./data/data.json', 'utf8'));
+const map = JSON.parse(fs.readFileSync('./data/data.json', 'utf8'));
 
 module.exports = {
   generateKey: function(url) {
