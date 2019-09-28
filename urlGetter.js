@@ -1,4 +1,4 @@
-var fetch = require('node-fetch');
+const fetch = require('node-fetch');
 
 const getURL = function(subreddit, postNumber) {
   return new Promise((resolve, reject) => {
