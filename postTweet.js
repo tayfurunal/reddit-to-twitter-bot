@@ -1,12 +1,12 @@
-var table = require('./checker');
-var fs = require('fs');
-var main = require('./bot');
-var downloader = require('./downloader');
+const table = require('./checker');
+const fs = require('fs');
+const main = require('./bot');
+const downloader = require('./downloader');
 
 module.exports = {
   tweetImage: async function() {
-    var url = await downloader.getImage();
-    var b64 = fs.readFileSync('./images/x.jpg', { encoding: 'base64' });
+    let url = await downloader.getImage();
+    let b64 = fs.readFileSync('./images/x.jpg', { encoding: 'base64' });
 
     console.log('* Uploading image...');
 
@@ -15,7 +15,7 @@ module.exports = {
       data,
       response
     ) {
-      var mediaId = data.media_id_string;
+      let mediaId = data.media_id_string;
 
       main.T.post('media/metadata/create', { media_id: mediaId }, function(
         err,
@@ -24,7 +24,7 @@ module.exports = {
       ) {
         if (!err) {
           console.log('-> Image uploaded!\r\n* Sending tweet...');
-          var params = { status: url[1], media_ids: [mediaId] };
+          let params = { status: url[1], media_ids: [mediaId] };
           main.T.post('statuses/update', params, function(err, data, response) {
             if (err) {
               console.log(
