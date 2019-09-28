@@ -1,21 +1,21 @@
-var downloader = require('image-downloader');
-var fs = require('fs');
-var subreddit = require('./subreddits');
-var urlGetter = require('./urlGetter');
-var table = require('./checker');
+const downloader = require('image-downloader');
+const fs = require('fs');
+const subreddit = require('./subreddits');
+const urlGetter = require('./urlGetter');
+const table = require('./checker');
 
 module.exports = {
   //downloads a random image and returns its URL
   getImage: async function() {
-    var selectedSubreddit = await subreddit.randomSubreddit();
-    var selectedPost = await subreddit.randomPost();
+    let selectedSubreddit = await subreddit.randomSubreddit();
+    let selectedPost = await subreddit.randomPost();
     console.log(
       '* New image was selected from /r/' +
         selectedSubreddit +
         '\r\n* Fetching image...'
     );
 
-    var imageURL;
+    let imageURL;
     //getting the image URL to download later
     imageURL = await urlGetter(selectedSubreddit, selectedPost);
 
