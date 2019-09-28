@@ -1,9 +1,9 @@
-var Twit = require('twit');
-var config = require('./config');
-var postTweet = require('./postTweet');
+const Twit = require('twit');
+const config = require('./config');
+const postTweet = require('./postTweet');
 
 //create a new object from the package and make it public for other modules
-var T = new Twit(config);
+const T = new Twit(config);
 module.exports.T = T;
 
 console.log(
