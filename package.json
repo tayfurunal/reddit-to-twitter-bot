@@ -23,7 +23,7 @@
   "homepage": "https://github.com/tayfurunal/RedditToTwitter-Bot#readme",
   "dependencies": {
     "image-downloader": "^3.5.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "twit": "^2.2.11"
   }
 }
